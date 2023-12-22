@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_ccmed.css">
+    <title>CCMed/CCMiKas</title>
+</head>
+
+<body>
+
+    <h1>Olá :)</h1>
+    <div class='bemvindo'>
+        <h2>Seja bem-vindo(a) à CCMed:</h2>
+    </div>
+    <h2>
+        <p></p>
+        um jeito prático de calcular sua média sem fazer contas!
+        <p></p>
+        Deixe que nós fazemos esse trabalho para você.
+    </h2>
+
+    <h4> > Não se esqueça de usar ponto (.) para as casas decimais</h4>
+
+    <div id="container">
+        <div class='calculadora'>
+            <h3><i>Coloque suas notas aqui:</i></h3>
+            <div class='espaço'>
+            </div>
+
+            <label for="provaMensal">Nota Prova Mensal: </label>
+            <input type="number" id="provaMensal" step="0.5" required><br>
+
+            <label for="provaBimestral">Nota Prova Bimestral: </label>
+            <input type="number" id="provaBimestral" step="0.5" required><br>
+
+            <label for="atividades">Nota de Atividades: </label>
+            <input type="number" id="atividades" step="0.5" required><br>
+
+            <div class='botao'>
+                <button onclick="calcularMedia()">Calcular Média</button>
+            </div>
+
+            <p id="resultado"></p>
+
+        </div>
+    </div>
+    
+    <script>
+        function calcularMedia() {
+            // Obter valores das entradas
+            var notaMensal = parseFloat(document.getElementById('provaMensal').value);
+            var notaBimestral = parseFloat(document.getElementById('provaBimestral').value);
+            var notaAtividades = parseFloat(document.getElementById('atividades').value);
+
+            // Calcular média ponderada
+            var mediaPonderada = (notaMensal * 2 + notaBimestral * 2 + notaAtividades) / 5;
+
+
+            // Obter o elemento de resultado
+            var resultadoElemento = document.getElementById('resultado');
+
+            // Definir a cor do texto como verde
+            resultadoElemento.style.color = 'rgb(245, 245, 245)';
+
+            resultadoElemento.style.fontSize = '30px';
+
+            resultadoElemento.style.fontFamily = 'Verdana, sans-serif';
+       
+            resultadoElemento.style.fontWeight = 'bold';
+
+
+            // Exibir o resultado na página
+            resultadoElemento.innerHTML = "Sua média: <span style='text-decoration: underline;  text-decoration-color: rgb(142, 32, 226);'>" + mediaPonderada.toFixed(1) + "</span>"
+
+
+        }
+    </script>
+
+</body>
+
+</html>
