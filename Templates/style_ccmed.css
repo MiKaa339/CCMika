@@ -95,4 +95,9 @@ h3 {
         display: flex;
         flex-direction: column; /* Layout de coluna para telas menores */
     }
+    h2, p {
+        font-size: 16px; /* Reduza o tamanho da fonte para telas menores */
+    }
+
 }
+
