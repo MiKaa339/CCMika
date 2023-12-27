@@ -90,22 +90,6 @@ h3 {
     margin-top: 5px
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        display: flex;
-        flex-direction: column; /* Layout de coluna para telas menores */
-    }
-    h2, p {
-        font-size: 16px; /* Reduza o tamanho da fonte para telas menores */
-    }
-
-}
-
-h2, p {
-    letter-spacing: 0.5px; /* Ajuste a espaçamento entre letras */
-    word-spacing: 1px; /* Ajuste a espaçamento entre palavras */
-    text-align: justify; /* Texto justificado */
-}
 
 
 
