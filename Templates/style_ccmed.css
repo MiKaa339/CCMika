@@ -101,3 +101,11 @@ h3 {
 
 }
 
+h2, p {
+    letter-spacing: 0.5px; /* Ajuste a espaçamento entre letras */
+    word-spacing: 1px; /* Ajuste a espaçamento entre palavras */
+    text-align: justify; /* Texto justificado */
+}
+
+
+
