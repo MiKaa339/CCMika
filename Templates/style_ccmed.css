@@ -89,3 +89,10 @@ font-size: 13px;
 h3 {
     margin-top: 5px
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column; /* Layout de coluna para telas menores */
+    }
+}
